@@ -1,5 +1,7 @@
 {
   "projects": {
     "default": "life-nav-u-anti-gravity"
-  }
+  },
+  "targets": {},
+  "etags": {}
 }

@@ -52,7 +52,7 @@ const Navbar = () => {
                 onClick={() => window.open("https://classroom.google.com/", "_blank")}
                 className="flex items-center gap-2 bg-black text-white px-5 py-2 rounded-full text-[13px] font-bold hover:bg-[#1a1a1a] transition-all shadow-md active:scale-95 cursor-pointer"
             >
-                <span>Download</span>
+                <span className="hidden md:inline">Download</span>
                 <svg
                     width="14"
                     height="14"

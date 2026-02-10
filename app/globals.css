@@ -10,6 +10,14 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-syne: var(--font-syne);
+  --font-lora: var(--font-lora);
+  --font-montserrat: var(--font-montserrat);
+  --font-audrey: var(--font-audrey);
+  --font-playfair: var(--font-playfair);
+  --font-outfit: var(--font-outfit);
+  --font-cormorant: var(--font-cormorant);
+  --font-cinzel: var(--font-cinzel);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,4 +31,16 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.font-syne {
+  font-family: var(--font-syne), sans-serif;
+}
+
+.font-lora {
+  font-family: var(--font-lora), serif;
+}
+
+.font-cormorant {
+  font-family: var(--font-cormorant), serif;
 }

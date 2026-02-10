@@ -25,14 +25,24 @@ const Hero = () => {
                 <AnimatePresence>
                     {isVideoEnded && (
                         <>
-                            <motion.h1
-                                initial={{ opacity: 0, y: 30 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
-                                className="text-5xl md:text-8xl font-medium text-black tracking-[0.05em] text-center font-montserrat mt-[12vh] uppercase"
-                            >
-                                Life Navigation U
-                            </motion.h1>
+                            {/* Text Reveal Animation Container */}
+                            <div className="relative mt-[12vh] flex justify-center items-center">
+                                <div className="relative inline-block">
+                                    <motion.h1
+                                        initial={{ opacity: 0, y: 20 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{
+                                            duration: 0.8,
+                                            delay: 0.5,
+                                            ease: "easeOut",
+                                        }}
+                                        className="text-5xl md:text-8xl font-semibold text-gray-700 tracking-[0.05em] text-center font-cormorant uppercase px-2"
+                                    >
+                                        Life Navigation U
+                                    </motion.h1>
+
+                                </div>
+                            </div>
 
                             {/* Refined gap (counter-adjusted to keep tagline position fixed) */}
                             <div className="h-64 md:h-[33vh] w-full flex items-center justify-center">
@@ -42,7 +52,7 @@ const Hero = () => {
                             <motion.div
                                 initial={{ opacity: 0, y: -30 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 1.2, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                                transition={{ duration: 0.5, delay: 0.5, ease: [0.22, 1, 0.36, 1] }} // Syncs with title reveal end (1.0s)
                                 className="flex flex-col items-center gap-12"
                             >
                                 <p className="text-lg md:text-xl text-gray-400 font-sans tracking-[0.2em] uppercase text-center max-w-2xl px-6 leading-relaxed opacity-60">
@@ -53,7 +63,7 @@ const Hero = () => {
                                 <motion.button
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: 0.8 }}
+                                    transition={{ duration: 0.5, delay: 0.6 }} // Fast pop in
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
                                     onClick={() => window.open("https://www.youtube.com/watch?v=cIoLX6GSIjo", "_blank")}
