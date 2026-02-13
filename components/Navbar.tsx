@@ -13,22 +13,18 @@ const Navbar = () => {
         >
             {/* Left: Brand */}
             <div className="flex items-center gap-2">
-                <div className="w-8 h-8 flex items-center justify-center">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="drop-shadow-sm">
-                        {/* Sophisticated Outer Ring with Cardinal Points */}
-                        <circle cx="12" cy="12" r="9" stroke="#cbd5e1" strokeWidth="1" />
-                        <path d="M12 2v2m0 16v2M2 12h2m16 0h2" stroke="#94a3b8" strokeWidth="1" strokeLinecap="round" />
-
-                        {/* Professional Split Needle */}
-                        <path d="M12 5l2 7h-4l2-7z" fill="#7c3aed" /> {/* Purple North */}
-                        <path d="M12 19l-2-7h4l-2 7z" fill="#3b82f6" /> {/* Blue South */}
-
-                        {/* Modern Hub */}
-                        <circle cx="12" cy="12" r="1.2" fill="white" />
-                        <circle cx="12" cy="12" r="0.5" fill="#1e293b" />
-                    </svg>
+                <div className="w-10 h-10 flex items-center justify-center">
+                    <motion.img
+                        src="/LNU Logo 3.png"
+                        alt="LNU Logo"
+                        className="w-full h-full object-contain drop-shadow-sm cursor-pointer"
+                        whileHover={{
+                            rotate: 1800,
+                            transition: { duration: 2, ease: "easeOut" }
+                        }}
+                    />
                 </div>
-                <span className="text-black font-bold text-sm tracking-tight text-nowrap">Life Navigation U</span>
+                <span className="text-black font-bold text-sm tracking-tight text-nowrap font-brand">Life Navigation U</span>
             </div>
 
             {/* Center: Links (Absolutely Centered) */}
@@ -37,7 +33,7 @@ const Navbar = () => {
                     <a
                         key={item}
                         href="#"
-                        className="text-gray-500 hover:text-black text-[13px] font-semibold transition-all duration-300"
+                        className="text-gray-500 hover:text-black text-[13px] font-semibold transition-all duration-300 font-brand"
                     >
                         {item}
                         {(item === "Use Cases" || item === "Resources") && (
@@ -50,7 +46,7 @@ const Navbar = () => {
             {/* Right: Download Button */}
             <button
                 onClick={() => window.open("https://classroom.google.com/", "_blank")}
-                className="flex items-center gap-2 bg-black text-white px-5 py-2 rounded-full text-[13px] font-bold hover:bg-[#1a1a1a] transition-all shadow-md active:scale-95 cursor-pointer"
+                className="flex items-center gap-2 bg-black text-white px-5 py-2 rounded-full text-[13px] font-bold hover:bg-[#1a1a1a] transition-all shadow-md active:scale-95 cursor-pointer font-brand"
             >
                 <span className="hidden md:inline">Download</span>
                 <svg
